@@ -12,7 +12,7 @@ grails.project.dependency.resolution = {
         // uncomment to disable ehcache
         // excludes 'ehcache'
     }
-    log "error" // log level of Ivy resolver, either 'error', 'warn', 'info', 'debug' or 'verbose'
+    log "warn" // log level of Ivy resolver, either 'error', 'warn', 'info', 'debug' or 'verbose'
     checksums true // Whether to verify checksums on resolve
 
     repositories {
@@ -22,9 +22,10 @@ grails.project.dependency.resolution = {
         grailsCentral()
         mavenCentral()
 
-        // uncomment these to enable remote dependency resolution from public Maven repositories
+        // uncomment the below to enable remote dependency resolution
+        // from public Maven repositories
+        mavenLocal()
         //mavenCentral()
-        //mavenLocal()
         //mavenRepo "http://snapshots.repository.codehaus.org"
         //mavenRepo "http://repository.codehaus.org"
         //mavenRepo "http://download.java.net/maven/2/"
@@ -33,7 +34,8 @@ grails.project.dependency.resolution = {
     dependencies {
         // specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes eg.
 
-        // runtime 'mysql:mysql-connector-java:5.1.16'
+        // runtime 'mysql:mysql-connector-java:5.1.13'
+        runtime 'postgresql:postgresql:8.4-702.jdbc3'
     }
 
     plugins {
