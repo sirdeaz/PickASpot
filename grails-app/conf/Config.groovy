@@ -59,6 +59,7 @@ grails.exceptionresolver.params.exclude = ['password']
 // enable query caching by default
 grails.hibernate.cache.queries = true
 
+
 // set per-environment serverURL stem for creating absolute links
 environments {
     development {
@@ -91,3 +92,12 @@ log4j = {
            'org.hibernate',
            'net.sf.ehcache.hibernate'
 }
+
+// FBootstrapp plugin configuration
+grails.plugins.fboostrapp.fixtaglib = true
+
+// Facebook sdk plugin
+grails.plugin.facebooksdk.appId = 257551291016125
+grails.plugin.facebooksdk.appPermissions = "email,publish_stream"
+grails.plugin.facebooksdk.appSecret = "59e2cea4eac9c25c3aea0d9bd8dca77e"
+
